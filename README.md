@@ -53,7 +53,7 @@ flipkart-clone/
 
 ## 📸 Screenshots
 
-![Full Page](./screenshots/full-page_flipkart_clone.png)
+![Full Page](./screenshots/fullpage.png)
 
 
 ## ▶️ How to Run Locally
