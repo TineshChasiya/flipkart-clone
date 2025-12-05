@@ -1,0 +1,170 @@
+.category_nav{
+    width: 95%;
+    margin: 10px auto;
+    background-color: rgba(0,0,0,0.02);
+    padding: 5px 0;
+}
+
+.category_nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    list-style-type: none;
+    gap: 0 5rem;
+}
+
+.category_nav ul li{
+    position: relative;
+    width: 80px;
+    text-align: center;
+}
+
+.category_nav ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.category_nav ul li a span{
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: black;
+}
+
+
+ul .clothes a .clothes_text i{
+    margin-left: 5px;
+    transition: all 0.5s ease;
+}
+
+ul .clothes a:hover .clothes_text i{
+    transform: rotate(180deg);
+}
+
+.category_nav ul li:hover .mega_menu{
+    display: flex;
+}
+
+
+.category_nav ul li .mega_menu {
+    position: absolute;
+    top: 100%; /* dropdown li ke neeche */
+    left: -40%;
+    transform: translateX(-40%);
+    display: none;
+    width: 600px;
+    flex-direction: row; /* agar aap columns side by side chahte ho */
+    background: white;
+    z-index: 100;
+}
+
+.clothes .mega_menu .column{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    /* padding: 10px; */
+    border-radius: 5px;
+    margin: 0 auto;
+
+}
+
+.clothes .mega_menu .column a{
+    display:  block;
+    margin-bottom: 1rem;
+    padding: 10px;
+    position: relative;
+}
+
+.clothes .mega_menu .column a i{
+    position: absolute;
+    right: 10px;
+    color: black;
+}
+
+.clothes .mega_menu .column a span{
+    font-size: 0.8rem;
+}
+
+.clothes .mega_menu .column:nth-child(1) a:nth-child(1){
+    background-color: rgba(0, 0, 255, 0.07);
+}
+
+.clothes .mega_menu .column:nth-child(1) a .left_icon{
+    display: none;
+}
+
+.clothes .mega_menu .column:nth-child(1) a:hover{
+    background-color: rgba(0, 0, 255, 0.07);
+}
+
+.clothes .mega_menu .column:nth-child(1) a:hover .left_icon{
+    display: inline;
+}
+
+.clothes .mega_menu .column:nth-child(2){
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.clothes .mega_menu .column:nth-child(2) .heading{
+    padding: 10px;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: auto;
+}
+
+.clothes .mega_menu .column:nth-child(2) a{
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.clothes .mega_menu .column:nth-child(2) a:hover{
+    font-weight: 600;
+    transform: scale(1.001);
+
+}
+
+.category_nav ul li a img {
+    width: 45px; 
+    height: 45px;
+    display: block;
+    object-fit: contain;
+}
+
+.category_nav ul li a span {
+    font-size: 0.8rem; 
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .category_nav ul {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 10px 25px 10px;
+        box-sizing: border-box;
+    }
+
+    .category_nav ul li {
+        flex: 0 0 auto;
+        text-align: center;
+    }
+
+    .category_nav ul li .mega_menu{
+        display: none;
+    }
+
+    .clothes_icon{
+        display: none;
+    }
+}

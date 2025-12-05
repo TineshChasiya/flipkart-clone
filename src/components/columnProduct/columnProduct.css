@@ -1,0 +1,154 @@
+.columnProduct {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    max-height: none;
+    height: auto;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.columnProductContainer {
+    background: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.columnProductContainer .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.columnProductContainer .top a {
+    text-decoration: none;
+}
+
+.columnProductContainer .top .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+}
+
+.columnProductContainer .top .more {
+    background-color: blue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+
+.columnProductContainer .columnProductItemContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.columnProductContainer .columnProductItemContainer .columnProductItem {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.columnProductContainer .columnProductItemContainer .columnProductItem a img {
+     width: 100%;
+    max-width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.columnProductContainer .columnProductItemContainer .columnProductItem .description {
+    display: flex;
+    flex-direction: column;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.columnProductContainer .columnProductItemContainer .columnProductItem .description .productName {
+    color: rgba(0, 0, 0, 0.70);
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.columnProductContainer .columnProductItemContainer .columnProductItem .description .offer {
+    text-decoration: none;
+    color: green;
+    font-weight: 600;
+   text-align: justify; 
+}
+
+@media (max-width: 1150px) {
+    .columnProduct{
+        display: block;
+    }
+
+     .columnProductContainer{
+        margin-bottom: 10px;
+     }
+
+  
+}
+
+@media (max-width: 720px) {
+   .columnProductContainer .columnProductItemContainer{
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+    .columnProductContainer .top .title{
+        font-size: 14px;
+    }
+
+    .columnProductContainer .columnProductItemContainer .columnProductItem .description{
+        font-size: 15px;
+    }
+
+    .columnProduct{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+@media (max-width: 430px) {
+   .columnProductContainer .columnProductItemContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+   .columnProductContainer .columnProductItemContainer .columnProductItem {
+      width: 100%  ;
+   }
+
+   .columnProductContainer .columnProductItemContainer .columnProductItem a img {
+      width: 110px ;
+      height: 110px ;
+   }
+
+    .columnProduct{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
